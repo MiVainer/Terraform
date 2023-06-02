@@ -25,9 +25,9 @@ backend "s3" {
 
   key        = "terraform/infrastructure/terraform.tfstate"
 
-  access_key = "YCAJED3ukYzhFyeleUi_TFS64"
+  access_key = ""
 
-  secret_key = "YCOkhv5tQMXTWkjTUmHVxu2VEoPNklNiOFCg3ngX"
+  secret_key = ""
 
  
 
