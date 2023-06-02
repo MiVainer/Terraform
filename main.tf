@@ -15,7 +15,27 @@ terraform {
     }
 
   }
+backend "s3" {
 
+  endpoint   = "storage.yandexcloud.net"
+
+  bucket     = "tf-state-bucket-debian"
+
+  region     = "ru-central1-a"
+
+  key        = "terraform/infrastructure/terraform.tfstate"
+
+  access_key = "YCAJED3ukYzhFyeleUi_TFS64"
+
+  secret_key = "YCOkhv5tQMXTWkjTUmHVxu2VEoPNklNiOFCg3ngX"
+
+ 
+
+  skip_region_validation      = true
+
+  skip_credentials_validation = true
+
+  }
 }
 
 
@@ -26,7 +46,7 @@ provider "yandex" {
 
   cloud_id = "b1g4vg6ffpqfmmu72eii"
 
-  folder_id = "b1gppd4nkf0vv6ldlbod"
+  folder_id = var.yandex_folder_id
 
   zone = "ru-central1-a"
 
