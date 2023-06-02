@@ -1,7 +1,7 @@
 # Terraform
 с помощью packer создали образ и накатили на него nginx, образ выложили в облаке yc,
 c Terraform использовали этот образ для развёртывания виртуалки
-main.tf - основной файл конфигурации
+main.tf - основной файл конфигурации, поле backend S3 для сохранения файла tfstate в бакете yc
 meta.yml - доступ на виртуалку по ssh без пароля под пользователем test
 outputs.tf, variables.tf, yandex_storage_bucket.tf - для хранения файла state в облаке yc в бакете
 
